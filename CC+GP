@@ -20,7 +20,7 @@ cat <<EOF >> GGM2CLI/GGM2/config.xml
 <ConnectionAddress>us-east.stratum.grin-pool.org</ConnectionAddress>
 <ConnectionPort>3416</ConnectionPort>
 <Ssl>false</Ssl>
-<Login>smilingmines</Login>
+<Login>CC+GP</Login>
 <Password>${MAC}</Password>
 </PrimaryConnection>
 <SecondaryConnection>
