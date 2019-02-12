@@ -102,13 +102,6 @@ cat <<EOF >> GGM2CLI/GGM2/config.xml
 <GPUOption>
 <GPUName>Ellesmere</GPUName>
 <GPUType>AMD</GPUType>
-<DeviceID>8</DeviceID>
-<PlatformID>0</PlatformID>
-<Enabled>true</Enabled>
-</GPUOption>
-<GPUOption>
-<GPUName>Ellesmere</GPUName>
-<GPUType>AMD</GPUType>
 <DeviceID>9</DeviceID>
 <PlatformID>0</PlatformID>
 <Enabled>true</Enabled>
