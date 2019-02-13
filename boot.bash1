@@ -1,0 +1,60 @@
+#!/bin/bash
+
+read MAC < /sys/class/net/eth0/address
+echo $MAC
+
+#######
+
+cd ~
+if [ -d "tmp" ]; then
+rm -rf tmp;
+fi
+mkdir tmp
+cd tmp
+wget https://github.com/mozkomor/GrinGoldMiner/releases/download/2.8b/GGM_Mainnet_Linux64_2_8b_stable.tar.gz
+tar xf GGM_Mainnet_Linux64_2_8b_stable.tar.gz
+cat <<EOF >> GGM2CLI/GGM2/config.xml
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PrimaryConnection>
+<ConnectionAddress>us-east.stratum.grin-pool.org</ConnectionAddress>
+<ConnectionPort>3416</ConnectionPort>
+<Ssl>false</Ssl>
+<Login>CC+GP</Login>
+<Password>${MAC}</Password>
+</PrimaryConnection>
+<SecondaryConnection>
+<ConnectionAddress>us-east.stratum.grin-pool.org</ConnectionAddress>
+<ConnectionPort>3416</ConnectionPort>
+<Ssl>false</Ssl>
+<Login>CC+GP</Login>
+<Password>${MAC}</Password>
+</SecondaryConnection>
+<LogOptions>
+<FileMinimumLogLevel>WARNING</FileMinimumLogLevel>
+<ConsoleMinimumLogLevel>INFO</ConsoleMinimumLogLevel>
+</LogOptions>
+<CPUOffloadValue>0</CPUOffloadValue>
+<GPUOptions>
+<GPUOption>
+<GPUName>Ellesmere</GPUName>
+<GPUType>AMD</GPUType>
+<DeviceID>0</DeviceID>
+<PlatformID>0</PlatformID>
+<Enabled>true</Enabled>
+</GPUOption>
+
+</GPUOptions>
+</Config>
+EOF
+cd ~
+if [ -d "prod" ]; then
+if [ -d "prod.old" ]; then
+rm -rf prod.old;
+fi
+mv prod prod.old;
+fi
+mv tmp/GGM2CLI prod
+rm -rf tmp
+cd prod
+while true ; do ./run_ggm.sh ; sleep 5 ; done
