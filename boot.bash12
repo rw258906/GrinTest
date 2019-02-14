@@ -17,15 +17,15 @@ cat <<EOF >> GGM2CLI/GGM2/config.xml
 <?xml version="1.0" encoding="utf-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <PrimaryConnection>
-<ConnectionAddress>us-east.stratum.grin-pool.org</ConnectionAddress>
-<ConnectionPort>9999</ConnectionPort>
+<ConnectionAddress>eu.stratum.grin-pool.org</ConnectionAddress>
+<ConnectionPort>3416</ConnectionPort>
 <Ssl>false</Ssl>
 <Login>CC+GP</Login>
 <Password>${MAC}</Password>
 </PrimaryConnection>
 <SecondaryConnection>
-<ConnectionAddress>us-east.stratum.grin-pool.org</ConnectionAddress>
-<ConnectionPort>9999</ConnectionPort>
+<ConnectionAddress>eu.stratum.grin-pool.org</ConnectionAddress>
+<ConnectionPort>3416</ConnectionPort>
 <Ssl>false</Ssl>
 <Login>CC+GP</Login>
 <Password>${MAC}</Password>
@@ -120,7 +120,6 @@ cat <<EOF >> GGM2CLI/GGM2/config.xml
 <PlatformID>0</PlatformID>
 <Enabled>true</Enabled>
 </GPUOption>
-
 </GPUOptions>
 </Config>
 EOF
@@ -135,4 +134,5 @@ mv tmp/GGM2CLI prod
 rm -rf tmp
 cd prod
 while true ; do ./run_ggm.sh ; sleep 5 ; done
+
 
