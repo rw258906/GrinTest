@@ -18,14 +18,14 @@ cat <<EOF >> GGM2CLI/GGM2/config.xml
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <PrimaryConnection>
 <ConnectionAddress>eu.stratum.grin-pool.org</ConnectionAddress>
-<ConnectionPort>3416</ConnectionPort>
+<ConnectionPort>9999</ConnectionPort>
 <Ssl>false</Ssl>
 <Login>CC+GP</Login>
 <Password>${MAC}</Password>
 </PrimaryConnection>
 <SecondaryConnection>
 <ConnectionAddress>eu.stratum.grin-pool.org</ConnectionAddress>
-<ConnectionPort>3416</ConnectionPort>
+<ConnectionPort>9999</ConnectionPort>
 <Ssl>false</Ssl>
 <Login>CC+GP</Login>
 <Password>${MAC}</Password>
