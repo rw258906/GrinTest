@@ -17,18 +17,18 @@ cat <<EOF >> GGM2CLI/GGM2/config.xml
 <?xml version="1.0" encoding="utf-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <PrimaryConnection>
-<ConnectionAddress>eu.stratum.grin-pool.org</ConnectionAddress>
+<ConnectionAddress>us-east-stratum.grinmint.com</ConnectionAddress>
 <ConnectionPort>3416</ConnectionPort>
 <Ssl>false</Ssl>
-<Login>CC+GP</Login>
-<Password>${MAC}</Password>
+<Login>cryptocaverns@gmail.com/${MAC}</Login>
+<Password>thisispublicandnotstrong</Password>
 </PrimaryConnection>
 <SecondaryConnection>
-<ConnectionAddress>eu.stratum.grin-pool.org</ConnectionAddress>
+<ConnectionAddress>us-east-stratum.grinmint.com</ConnectionAddress>
 <ConnectionPort>3416</ConnectionPort>
 <Ssl>false</Ssl>
-<Login>CC+GP</Login>
-<Password>${MAC}</Password>
+<Login>cryptocaverns@gmail.com/${MAC}</Login>
+<Password>thisispublicandnotstrong</Password>
 </SecondaryConnection>
 <LogOptions>
 <FileMinimumLogLevel>WARNING</FileMinimumLogLevel>
