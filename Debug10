@@ -24,11 +24,11 @@ cat <<EOF >> GGM2CLI/GGM2/config.xml
 <Password>${MAC}</Password>
 </PrimaryConnection>
 <SecondaryConnection>
-<ConnectionAddress>us-east.stratum.grin-pool.org</ConnectionAddress>
-<ConnectionPort>9999</ConnectionPort>
+<ConnectionAddress>us-east-stratum.grinmint.com</ConnectionAddress>
+<ConnectionPort>3416</ConnectionPort>
 <Ssl>false</Ssl>
-<Login>CC+GP</Login>
-<Password>${MAC}</Password>
+<Login>cryptocaverns@gmail.com/${MAC}</Login>
+<Password>thisispublicandnotstrong</Password>
 </SecondaryConnection>
 <LogOptions>
 <FileMinimumLogLevel>WARNING</FileMinimumLogLevel>
